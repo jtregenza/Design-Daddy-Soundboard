@@ -1,4 +1,3 @@
-// Hit the gear icon to the left of JS in the header to open JavaScript settings
 
 class Board extends React.Component {
 		constructor(props) {
@@ -62,19 +61,29 @@ class Board extends React.Component {
 			if (this.props.sound.isPlaying) {
 				recordAni += ' spin';
 			}
+
+			let soundCount = this.props.sound.count;
+
+
 			return (
 				<div className='sound-card'
 					onClick={() => this.props.playSound(this.props.sound.id)}>
-					<div class="sound-content">
+					<div className="sound-content">
 						<h3>{this.props.sound.soundName}</h3>
-						<div class="sound-actions">
+						<div className="sound-actions">
 							<div className="image-container">
 								<i className='material-icons' aria-hidden="true">{speakerStyle}</i>
 							</div>
-							<div className="count">{this.props.sound.count}</div>
+							{soundCount < 99 &&
+								<div className="count">{this.props.sound.count}</div>
+							
+							}
+							{soundCount > 99 &&
+								<div className="count">!</div>
+							}
 						</div>
-						<div class="record-container">
-							<img class={recordAni} src="/img/record-icon.svg"/>
+						<div className="record-container">
+							<img className={recordAni} src="/img/record-icon.svg"/>
 						</div>
 					</div>
 				</div>
@@ -100,15 +109,15 @@ class Board extends React.Component {
 					{ id: 11, soundName: 'Live your best life', soundURL: 'https://dl.dropboxusercontent.com/s/8tmikmnhr0k59bx/win-an-award.m4a', count: 0, isPlaying: false },
 					{ id: 12, soundName: 'I got you boo', soundURL: 'https://dl.dropboxusercontent.com/s/8tmikmnhr0k59bx/win-an-award.m4a', count: 0, isPlaying: false },
 					{ id: 13, soundName: 'Its ya boi', soundURL: 'https://dl.dropboxusercontent.com/s/8tmikmnhr0k59bx/win-an-award.m4a', count: 0, isPlaying: false },
-					{ id: 13, soundName: 'Smoke Test', soundURL: 'https://dl.dropboxusercontent.com/s/8tmikmnhr0k59bx/win-an-award.m4a', count: 0, isPlaying: false },
-					{ id: 14, soundName: 'The Good Hour', soundURL: 'https://dl.dropboxusercontent.com/s/8tmikmnhr0k59bx/win-an-award.m4a', count: 0, isPlaying: false }
+					{ id: 14, soundName: 'Smoke Test', soundURL: 'https://dl.dropboxusercontent.com/s/8tmikmnhr0k59bx/win-an-award.m4a', count: 0, isPlaying: false },
+					{ id: 15, soundName: 'The Good Hour', soundURL: 'https://dl.dropboxusercontent.com/s/8tmikmnhr0k59bx/win-an-award.m4a', count: 0, isPlaying: false }
 				]
 			}
 		}
 			render() {
 				return (
 					<div>
-						<div class="background-img"></div>
+						<div className="background-img"></div>
 						<h1>Design Daddy Soundboard</h1>
 						<Board sounds={this.state.sounds} audio={this.state.audio} />
 						{/* <p>Special thanks to <a href="https://twitter.com/manifoldkaizen">Stephen Fox</a> for the help with toggling icons and <a href='https://twitter.com/gwmccull'>Garrett McCullough</a> helping me understand event listeners and memory leak!</p> */}
