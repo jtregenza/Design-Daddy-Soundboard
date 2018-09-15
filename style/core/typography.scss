@@ -1,0 +1,67 @@
+// @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+@import url('https://fonts.googleapis.com/css?family=Bungee|Righteous|Roboto|Material+Icons');
+
+body {
+	padding: 1rem;
+	font-family: sans-serif;
+  }
+  
+  h1 {
+	// text-align: center;
+	font-size: 2.5rem;
+	line-height: 1.25;
+	font-weight: 100;
+	text-shadow:4px 4px 0 rgb(240, 10, 125);
+	// margin: 0.2em;
+	color: white;
+	font-family: "Bungee", cursive;
+	@include respond-to(tiny) {
+		font-size:2rem;
+	}
+  }
+  
+  h3 {
+	text-align: center;
+	color: whitesmoke;
+	text-shadow: 0 0 4px rgba(0,0,0,0.24);
+	font-family: "Righteous" , cursive;
+	font-size:1.625rem;
+	@include respond-to(tiny) {
+		font-size:1.5rem;
+	}
+  }
+  
+  p {
+	text-align: center;
+	color: white;
+	font-weight: 300;
+  }
+  
+  a {
+	color: white;
+  }
+
+  .material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;  /* Preferred icon size */
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+  
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+  
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+  
+	/* Support for IE. */
+	font-feature-settings: 'liga';
+  }
