@@ -91,26 +91,30 @@ class Board extends React.Component {
 		}
 	}
 	
+
 	class App extends React.Component {
 		constructor(props) {
 			super(props);
 			this.state = {
 				sounds: [
-					{ id: 1, soundName: 'How you livin', soundURL: 'https://dl.dropboxusercontent.com/s/bao523r1ixxj32b/Recording.m4a', count: 0, isPlaying: false }, 
-					{ id: 2, soundName: 'Fuck it up', soundURL: 'https://dl.dropboxusercontent.com/s/bciko68hn6vxfi5/munchdew.m4a', count: 0, isPlaying: false },
-					{ id: 3, soundName: 'Bad Boy', soundURL: 'https://dl.dropboxusercontent.com/s/uah7h53h85iewgz/uh-oops.m4a', count: 0, isPlaying: false },
-					{ id: 4, soundName: 'Buckwild', soundURL: 'https://dl.dropboxusercontent.com/s/uxh2dg6u5feqwcc/hufflepuff.m4a', count: 0, isPlaying: false },
-					{ id: 5, soundName: 'Good Boy', soundURL: 'https://dl.dropboxusercontent.com/s/323rhnwp9bnglmj/struck-by-lightning.m4a', count: 0, isPlaying: false },
-					{ id: 6, soundName: 'Always Said', soundURL: 'https://dl.dropboxusercontent.com/s/mh53hc4v5vfil2r/primal-noises.m4a', count: 0, isPlaying: false },
-					{ id: 7, soundName: 'Laugh 1', soundURL: 'https://dl.dropboxusercontent.com/s/44wlc2ifqf20qzt/family.m4a', count: 0, isPlaying: false },
-					{ id: 8, soundName: 'Laugh 2', soundURL: 'https://dl.dropboxusercontent.com/s/s70hruqm15jd7qc/lazer.m4a', count: 0, isPlaying: false },
-					{ id: 9, soundName: 'Star Wars', soundURL: 'https://dl.dropboxusercontent.com/s/tpdoeh03q26soil/stay-as-little-as-possible.m4a', count: 0, isPlaying: false },
-					{ id: 10, soundName: 'Grab That Moon', soundURL: 'https://dl.dropboxusercontent.com/s/ep463jwi2y99gfw/terrible.m4a', count: 0, isPlaying: false },
-					{ id: 11, soundName: 'Live your best life', soundURL: 'https://dl.dropboxusercontent.com/s/8tmikmnhr0k59bx/win-an-award.m4a', count: 0, isPlaying: false },
-					{ id: 12, soundName: 'I got you boo', soundURL: 'https://dl.dropboxusercontent.com/s/8tmikmnhr0k59bx/win-an-award.m4a', count: 0, isPlaying: false },
+					{ id: 1, soundName: 'How you livin', soundURL: 'https://dl.dropboxusercontent.com/s/351qi1jsmsg7h8e/How%20you%20Livin.m4a', count: 0, isPlaying: false }, 
+					{ id: 2, soundName: 'Fuck it up', soundURL: 'https://dl.dropboxusercontent.com/s/4tyf7uruyf6rbsq/Fuck%20it%20Up.m4a', count: 0, isPlaying: false },
+					{ id: 3, soundName: 'Bad Boy', soundURL: 'https://dl.dropboxusercontent.com/s/fnp5rk5wg6e13mi/Bad%20Boy.m4a', count: 0, isPlaying: false },
+					{ id: 4, soundName: 'Buckwild', soundURL: 'https://dl.dropboxusercontent.com/s/t3auwv5p5dx70tl/Buckwild.m4a', count: 0, isPlaying: false },
+					{ id: 5, soundName: 'Good Boy', soundURL: 'https://dl.dropboxusercontent.com/s/ubp2d6jcw4nlnh6/Good%20Boy.m4a', count: 0, isPlaying: false },
+					{ id: 6, soundName: 'Always Said', soundURL: 'https://dl.dropboxusercontent.com/s/8om99gxk3qoj98y/Always%20Said%20That.m4a', count: 0, isPlaying: false },
+					{ id: 7, soundName: 'Its ya boi', soundURL: 'https://dl.dropboxusercontent.com/s/ull84u2sw5zdhwx/its%20ya%20boi.m4a', count: 0, isPlaying: false },
+					{ id: 8, soundName: 'Large Sharkie Boiz', soundURL: 'https://dl.dropboxusercontent.com/s/r5mwb9h7q0a0eh6/Large%20Sharkie%20boiz.m4a', count: 0, isPlaying: false },
+					{ id: 9, soundName: 'Fuck me up', soundURL: 'https://dl.dropboxusercontent.com/s/27s9bv4s6w6dd64/Fuck%20me%20up.m4a', count: 0, isPlaying: false },
+					{ id: 10, soundName: 'Grab That Moon', soundURL: 'https://dl.dropboxusercontent.com/s/t0ijlpybr7vycnd/Grab%20That%20Moon.m4a', count: 0, isPlaying: false },
+					{ id: 11, soundName: 'Live your best life', soundURL: 'https://dl.dropboxusercontent.com/s/ajnfmv31f3xes88/Live%20your%20best%20life.m4a', count: 0, isPlaying: false },
+					{ id: 12, soundName: 'I got you boo', soundURL: 'https://dl.dropboxusercontent.com/s/5ruja5miaguq4ix/I%20got%20you%20boo.m4a', count: 0, isPlaying: false },
 					{ id: 13, soundName: 'Its ya boi', soundURL: 'https://dl.dropboxusercontent.com/s/8tmikmnhr0k59bx/win-an-award.m4a', count: 0, isPlaying: false },
-					{ id: 14, soundName: 'Smoke Test', soundURL: 'https://dl.dropboxusercontent.com/s/8tmikmnhr0k59bx/win-an-award.m4a', count: 0, isPlaying: false },
-					{ id: 15, soundName: 'The Good Hour', soundURL: 'https://dl.dropboxusercontent.com/s/8tmikmnhr0k59bx/win-an-award.m4a', count: 0, isPlaying: false }
+					{ id: 14, soundName: 'Smoke Test', soundURL: 'https://dl.dropboxusercontent.com/s/uzpwdses6es4j9w/Smoke%20Test%20Everyday.m4a', count: 0, isPlaying: false },
+					{ id: 15, soundName: 'The Good Hour', soundURL: 'https://dl.dropboxusercontent.com/s/hid376pjelaklsm/The%20Good%20Hour.m4a', count: 0, isPlaying: false },
+					{ id: 16, soundName: 'Design Daddy', soundURL: 'https://dl.dropboxusercontent.com/s/8l2qjg6jwh41vk5/Design%20Daddy.m4a', count: 0, isPlaying: false },
+					{ id: 16, soundName: 'Pride', soundURL: 'https://dl.dropboxusercontent.com/s/olflrlhi1bayynm/Pride.m4a', count: 0, isPlaying: false },
+					{ id: 17, soundName: 'Jade Dimitri', soundURL: 'https://dl.dropboxusercontent.com/s/p1ayj26cj6627ml/Jade%20Dimitri.m4a', count: 0, isPlaying: false }
 				]
 			}
 		}
@@ -120,7 +124,7 @@ class Board extends React.Component {
 						<div className="background-img"></div>
 						<h1>Design Daddy Soundboard</h1>
 						<Board sounds={this.state.sounds} audio={this.state.audio} />
-						{/* <p>Special thanks to <a href="https://twitter.com/manifoldkaizen">Stephen Fox</a> for the help with toggling icons and <a href='https://twitter.com/gwmccull'>Garrett McCullough</a> helping me understand event listeners and memory leak!</p> */}
+
 					</div>
 				);
 			}
